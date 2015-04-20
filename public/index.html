@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"ng-app="contatooh">
 <head>
 	<meta charset="UTF-8">
-	<title>Bem-vindo</title>
+	<title>Document</title>
 </head>
-<body>
-	<h1>Bem vindo ao Express</h1>
+<body ng-controller="ContatosController">
+	<h1>Bem vindo ao Contatooh</h1>
+	<button ng-click="incrementa()">Novo</button>
+	<p>Contatos cadastrados: {{total}}</p>
+
+	<script src="vendor/angular/angular.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/controllers/ContatosController.js"></script>
 </body>
 </html>
