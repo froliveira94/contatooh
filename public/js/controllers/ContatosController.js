@@ -1,8 +1,18 @@
-angular.module('contatooh').controller('ContatosController', function($scope){
+angular.module('contatooh').controller('ContatosController', function($scope, $http){
 
-	 $scope.total = 0;
-	 $scope.incrementa = function(){
-	 	$scope.total ++;
-	 };
+	// código omitido
+
+	$scope.contatos = [];
+
+	$http.get('/contatos')
+	.success(function(data){
+		$scope.contatos = data;
+	})
+	.error(function(statusText){
+		console.log('Não foi possível obter a lista de contatos');
+		console.log(statusText);
+	});
+
+	 $scope.filtro = '';
 
 });
