@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en"ng-app="contatooh">
+<html lang="en" ng-app="contatooh">
 <head>
+	<meta name="viewport" content="width=device=width">
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
 </head>
-<body ng-controller="ContatosController">
-	<h1>Bem vindo ao Contatooh</h1>
-	<button ng-click="incrementa()">Novo</button>
-	<p>Contatos cadastrados: {{total}}</p>
+	<body class="container">
 
-	<script src="vendor/angular/angular.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/controllers/ContatosController.js"></script>
-</body>
+		<div ng-view></div>
+
+		<script src="vendor/angular/angular.js"></script>
+		<script src="vendor/angular-route/angular-route.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/controllers/ContatosController.js"></script>
+		<script src="js/controllers/ContatoController.js"></script>
+
+	</body>
 </html>
